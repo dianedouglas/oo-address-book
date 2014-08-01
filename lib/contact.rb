@@ -1,4 +1,5 @@
 class Contact
+  attr_accessor :first, :last
   def initialize
     @first = ""
     @last = ""
@@ -9,11 +10,11 @@ class Contact
     @last = last
   end
 
-  def first
-    @first
-  end
+  # def first
+  #   @first
+  # end
 
-  def last
-    @last
-  end
+  # def last
+  #   @last
+  # end
 end

@@ -1,4 +1,5 @@
 class Phonenumber
+
   def initialize(number)
     @number = number
     @type = ""
