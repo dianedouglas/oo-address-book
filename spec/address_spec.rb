@@ -100,4 +100,13 @@ describe Book do
     test_book = Book.new()
     test_book.should be_an_instance_of Book
   end
+
+  it "adds a contact." do
+    test_book = Book.new()
+    test_contact = Contact.new()
+    test_book.add_contact(test_contact)
+    test_book.contacts.should eq [test_contact]
+    test_book.delete_contact(test_contact)
+    test_book.contacts.should eq []
+  end
 end

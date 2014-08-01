@@ -1,5 +1,7 @@
 class Contact
+
   attr_accessor :first, :last
+
   def initialize
     @phones = []
     @emails = []
@@ -29,4 +31,5 @@ class Contact
   def addressi
     @addressi
   end
+
 end
