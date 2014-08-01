@@ -1,20 +1,14 @@
 class Contact
   attr_accessor :first, :last
   def initialize
-    # @first = ""
-    # @last = ""
+    @phones = []
   end
 
-  # def set_names(last, first)
-  #   @first = first
-  #   @last = last
-  # end
+  def add_phone(phone)
+    @phones << phone
+  end
 
-  # def first
-  #   @first
-  # end
-
-  # def last
-  #   @last
-  # end
+  def phones
+    @phones
+  end
 end
