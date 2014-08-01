@@ -27,14 +27,9 @@ describe Phonenumber do
 
   it "returns a type of phone from the number." do
     test_phone = Phonenumber.new("5556667777")
-    test_phone.set_type("mobile")
+    test_phone.type = "mobile"
     test_phone.type.should eq ("mobile")
   end
 
-  it "sets a type of phone to the number." do
-    test_phone = Phonenumber.new("5556667777")
-    test_phone.set_type("mobile")
-    test_phone.type.should eq ("mobile")
-  end
 
 end
