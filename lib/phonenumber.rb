@@ -2,7 +2,7 @@ class Phonenumber
   attr_accessor :type
   def initialize(number)
     @number = number
-    @type = ""
+    # @type = ""
   end
 
   # def set_type(type)

@@ -1,14 +1,14 @@
 class Contact
   attr_accessor :first, :last
   def initialize
-    @first = ""
-    @last = ""
+    # @first = ""
+    # @last = ""
   end
 
-  def set_names(last, first)
-    @first = first
-    @last = last
-  end
+  # def set_names(last, first)
+  #   @first = first
+  #   @last = last
+  # end
 
   # def first
   #   @first
