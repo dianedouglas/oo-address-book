@@ -42,7 +42,7 @@ describe Contact do
 end
 
 describe Address do
-  it "initalizes the address class." do
+  it "initializes the address class." do
     test_address = Address.new()
     test_address.should be_an_instance_of Address
   end
@@ -64,7 +64,7 @@ describe Address do
 end
 
 describe Phonenumber do
-  it "initalizes the phone class." do
+  it "initializes the phone class." do
     test_phone = Phonenumber.new("5556667777")
     test_phone.should be_an_instance_of Phonenumber
   end
@@ -93,5 +93,11 @@ describe Email do
     test_email.type = "work"
     test_email.type.should eq ("work")
   end
+end
 
+describe Book do
+  it "initializes an empty address book" do
+    test_book = Book.new()
+    test_book.should be_an_instance_of Book
+  end
 end
