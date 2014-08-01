@@ -39,6 +39,26 @@ describe Contact do
     test_contact.add_address(test_address)
     test_contact.addressi.should eq [test_address]
   end
+
+  it "deletes the input (phone, email or address)" do
+    test_contact = Contact.new()
+    test_email1 = Email.new("alpaca@gmail.com")
+    test_email2 = Email.new("ilovehedgehogs@gmail.com")
+    test_contact.add_email(test_email1)
+    test_contact.add_email(test_email2)
+    test_contact.delete_email_phone_or_address(test_email1)
+    test_contact.emails.should eq [test_email2]
+  end
+
+  it "deletes the input (phone, email or address)" do
+    test_contact = Contact.new()
+    test_phone1 = Phonenumber.new("2223334444")
+    test_phone2 = Phonenumber.new("9998887777")
+    test_contact.add_phone(test_phone1)
+    test_contact.add_phone(test_phone2)
+    test_contact.delete_email_phone_or_address(test_phone1)
+    test_contact.phones.should eq [test_phone2]
+  end
 end
 
 describe Address do

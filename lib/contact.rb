@@ -1,3 +1,7 @@
+require './lib/email.rb'
+require './lib/phonenumber.rb'
+require './lib/address.rb'
+
 class Contact
 
   attr_accessor :first, :last
@@ -32,4 +36,13 @@ class Contact
     @addressi
   end
 
+  def delete_email_phone_or_address(info)
+    if(info.class == Email)
+      @emails.delete(info)
+    elsif(info.class == Phonenumber)
+      @phones.delete(info)
+    elsif(info.class == Address)
+      @addressi.delete(info)
+    end
+  end
 end
